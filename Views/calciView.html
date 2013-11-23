@@ -1,0 +1,41 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1:9091/getResources?query=Styles/calciStyles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+	
+	<script src="http://127.0.0.1:9091/getResources?query=Controllers/calciController.js"></script>
+</head>
+<body ng-app ng-controller="calciController">
+	<div class="calciBox">
+		<div class="display">
+			{{displayValue}}
+		</div>
+		<div class="keys">
+			<p> <input type="button" class="button black" value="7" ng-click='number("7")'>
+				<input type="button" class="button black" value="8" ng-click='number("8")'>
+				<input type="button" class="button black" value="9" ng-click='number("9")'>
+				
+				<input type="button" class="button pink" value="/" ng-click='operator("/")'>
+			</p>
+			<p>	<input type="button" class="button black" value="4" ng-click='number("4")'>
+				<input type="button" class="button black" value="5" ng-click='number("5")'>
+				<input type="button" class="button black" value="6" ng-click='number("6")'>
+			
+				<input type="button" class="button pink" value="*" ng-click='operator("*")'>
+			</p>
+			<p> <input type="button" class="button black" value="1" ng-click='number("1")'>
+				<input type="button" class="button black" value="2" ng-click='number("2")'>
+				<input type="button" class="button black" value="3" ng-click='number("3")'>
+			
+				<input type="button" class="button pink" value="-" ng-click='operator("-")'>
+			</p>
+			<p>	<input type="button" class="button black" value="0" ng-click='number("0")'>
+				<input type="button" class="button black" value="." ng-click='decimal()'>
+				<input type="button" class="button black" value="C" ng-click='clearAll()'>
+			
+				<input type="button" class="button pink" value="+" ng-click='operator("+")'>
+			</p>
+			<p> 
+				<input type="button" class="button orange" value="=" ng-click='equals()'>
+			</p>
+		</div>
+</body>
